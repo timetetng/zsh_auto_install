@@ -9,7 +9,7 @@ echo "========================================================="
 
 # 1. 安装 Zsh
 echo "1. 安装 Zsh..."
-apt update -y  # 加上 -y 避免交互
+apt update  # 加上 -y 避免交互
 if [ $? -eq 0 ]; then
   echo "apt update 成功。"
 else
@@ -17,7 +17,7 @@ else
   exit 1
 fi
 
-apt install zsh -y
+apt install zsh
 if [ $? -eq 0 ]; then
   echo "Zsh 安装完成。"
 else
@@ -38,7 +38,7 @@ fi
 
 # 3. 安装 Oh-My-Zsh 常用插件并配置
 echo "3. 安装 Oh-My-Zsh 常用插件..."
-apt install autojump zsh-syntax-highlighting -y
+apt install autojump zsh-syntax-highlighting
 git clone https://github.com/zsh-users/zsh-autosuggestions ~/.zsh/zsh-autosuggestions
 
 if [ $? -eq 0 ]; then
