@@ -7,6 +7,11 @@ echo "  此脚本将自动安装 Zsh、Oh-My-Zsh 以及常用插件。"
 echo "  请确保以 root 用户身份运行此脚本。"
 echo "========================================================="
 
+# 0. 安装 curl 和 git
+echo "0. 安装 curl 和 git..."
+apt update
+apt install curl git
+
 # 1. 安装 Zsh
 echo "1. 安装 Zsh..."
 apt update
