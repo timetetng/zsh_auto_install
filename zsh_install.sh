@@ -9,8 +9,8 @@ echo "========================================================="
 
 # 1. 安装 Zsh
 echo "1. 安装 Zsh..."
-apt update -y
-apt install zsh -y
+apt update
+apt install zsh
 
 # 2. 安装 Oh-My-Zsh
 echo "2. 安装 Oh-My-Zsh..."
@@ -18,7 +18,7 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/mas
 
 # 3. 安装 Oh-My-Zsh 常用插件并配置
 echo "3. 安装 Oh-My-Zsh 常用插件..."
-apt install autojump zsh-syntax-highlighting -y
+apt install autojump zsh-syntax-highlighting
 git clone https://github.com/zsh-users/zsh-autosuggestions ~/.zsh/zsh-autosuggestions
 
 # 4. 配置 .zshrc 文件
