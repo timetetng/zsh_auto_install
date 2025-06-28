@@ -9,7 +9,14 @@ echo "========================================================="
 
 # 1. 安装 Zsh
 echo "1. 安装 Zsh..."
-apt update
+apt update -y  # 加上 -y 避免交互
+if [ $? -eq 0 ]; then
+  echo "apt update 成功。"
+else
+  echo "apt update 失败，请检查网络连接或手动更新。"
+  exit 1
+fi
+
 apt install zsh -y
 if [ $? -eq 0 ]; then
   echo "Zsh 安装完成。"
